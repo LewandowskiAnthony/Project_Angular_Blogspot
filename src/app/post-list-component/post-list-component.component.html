@@ -1,0 +1,6 @@
+<h1>Posts</h1>
+<app-post-list-item-component *ngFor="let post of posts"
+                                [postTitle] = "post.getTitle()"
+                                [postTopic] = "post.getTopic()"
+                                [postDate] = "post.getDate()">
+</app-post-list-item-component>

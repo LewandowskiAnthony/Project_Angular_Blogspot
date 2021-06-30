@@ -1,0 +1,27 @@
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': hasLove === true,
+                'list-group-item-danger': hasLove === false}">
+<div class="container-fluid" style="border-style: groove;">
+    <div class="row">
+        <div class="col-xs-6">
+            <h2>{{postTitle}}</h2>
+        </div>
+        <div class="col-xs-6">
+            <h4 style="float:right;">{{postDate | date : 'short'}}</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>{{postTopic}}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <button id="love" class="btn btn-primary" (click)="WinLove()" [disabled]="hasLove">Love It</button>
+            <button id="hate" class="btn btn-primary" (click)="LossLove()" [disabled]="!hasLove">Hate It</button> 
+        </div>
+    </div>
+</div>
+</li>
+
+
